@@ -6,20 +6,25 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit0ff5259a5791b558eb64012e0db946f3
 {
-    public static $prefixesPsr0 = array (
-        'M' => 
+    public static $prefixLengthsPsr4 = array (
+        'C' => 
         array (
-            'Monolog' => 
-            array (
-                0 => __DIR__ . '/..' . '/monolog/monolog/src',
-            ),
+            'Classes\\' => 8,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Classes\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Classes',
         ),
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixesPsr0 = ComposerStaticInit0ff5259a5791b558eb64012e0db946f3::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit0ff5259a5791b558eb64012e0db946f3::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit0ff5259a5791b558eb64012e0db946f3::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }
