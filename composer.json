@@ -1,8 +1,11 @@
 {
-    "autoload": {
-        "psr-4": {
-            "Classes\\": "src/Classes/"
-        }
-    }
+	"autoload" : {
+		"psr-4" : {
+			"Classes\\" : "src/Classes"
+		}
+	},
+	
+	"name" : "Ivan Aleksandrow",
+	"description" : "Paysera Test",
+	"type" : "Test"
 }
-

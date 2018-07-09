@@ -1,6 +1,7 @@
 <?php
+require_once __DIR__ . '/vendor/autoload.php';
 
-require_once 'vendor/autoload.php';
+use Classes\CashIn\CashIn;
 
-
-$cashIn = new Aleksandrow\Test\CashIn;
+$c = new CashIn;
+$c->test();
