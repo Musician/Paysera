@@ -15,17 +15,15 @@ class Currency
      * I defined them here for futher use. May be a call to DB to get current rates would be useful, but that will harden the task for now. 
      * 
      */
-    const EUR = 1;
-    const USD = 1.1497; // For 1 EUR
-    const JPY = 129.53; // For 1 EUR
+    protected $EUR = 1;
+    protected $USD = 1.1497; // For 1 EUR
+    protected $JPY = 129.53; // For 1 EUR
     
-    public function conversion($amount, $to)
+    public function conversion($amount, $currency = EUR)
     {
-        
-        
-        
+        $currencyString = strtoupper($currency);
+        return round($amount / $this->$currencyString , 2);
     }
-    
     
     
 }

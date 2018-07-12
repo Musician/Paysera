@@ -11,10 +11,10 @@ class CashOut
 {
 
     /**
-     *  Function comission:
+     *  Function commision:
      *  calculates given percentage for Cashed out amount. 
      */
-    public function comission($amount, $percentage = 0.03, $limit = 5.00)
+    public function commision($amount, $percentage = 0.03, $limit = 5.00)
     {
         $fee = ($amount / 100) * $percentage;
         if ($fee > $limit)
