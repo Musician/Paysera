@@ -30,11 +30,10 @@ class CsvReader
      */
     public function getData() 
     {
+        $res = array();
         $csv = array_map('str_getcsv', file($this->file));
-        array_walk($csv, function(&$a) use ($csv) {
-            $a = array_combine($csv[0], $a);
-        });
-        array_shift($csv);
+        // This is used only if csv file has header describing the values below it. 
+        //array_shift($csv);
         
         return $csv;
     }
